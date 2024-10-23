@@ -1,0 +1,373 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f3e6;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a1a1a;
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+.titulo-secao::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #e67e22;
+}
+
+/* Navegação */
+.navbar {
+  background-color: rgba(230, 126, 34, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #f9f3e6 !important;
+}
+
+/* Seção Herói */
+.heroi {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.heroi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heroi .container {
+  position: relative;
+  z-index: 1;
+}
+
+.heroi h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroi p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease 0.5s;
+  animation-fill-mode: both;
+}
+
+.heroi .btn {
+  animation: fadeInUp 1s ease 1s;
+  animation-fill-mode: both;
+  background-color: #e67e22;
+  border-color: #e67e22;
+  font-size: 1.1rem;
+  padding: 10px 30px;
+}
+
+.heroi .btn:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+}
+
+/* Seção Galeria */
+.galeria {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+.container-galeria {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.container-galeria:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.item-galeria {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-galeria:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.item-galeria img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.item-galeria:hover img {
+  transform: scale(1.1);
+}
+
+.sobreposicao {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(230, 126, 34, 0.8);
+}
+
+.item-galeria:hover .sobreposicao {
+  opacity: 1;
+}
+
+.texto {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.texto-galeria {
+  flex: 1;
+  padding: 0 30px;
+}
+
+.texto-galeria h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e67e22;
+}
+
+.texto-galeria p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Seção Vídeos */
+.videos {
+  padding: 80px 0;
+  background-color: #f9f3e6;
+}
+
+.container-video {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.container-video:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.wrapper-video {
+  flex: 1;
+  position: relative;
+  padding-bottom: 28.125%; /* Proporção 16:9, mas metade da largura */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.wrapper-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.texto-video {
+  flex: 1;
+  padding: 0 30px;
+}
+
+.texto-video h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e67e22;
+}
+
+.texto-video p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Seção Sobre */
+.sobre {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.icones-sociais {
+  margin-bottom: 20px;
+}
+
+.icone-social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  border-radius: 50%;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.icone-social:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+footer a {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+  .heroi h1 {
+    font-size: 2.5rem;
+  }
+  
+  .heroi p {
+    font-size: 1rem;
+  }
+  
+  .titulo-secao {
+    font-size: 2rem;
+  }
+}
+
+/* Efeito de digitação do cursor */
+.cursor {
+  display: inline-block;
+  width: 3px;
+  background-color: #fff;
+  margin-left: 0.1rem;
+  animation: piscar 0.7s infinite;
+}
+
+@keyframes piscar {
+  0% { background-color: #fff; }
+  49% { background-color: #fff; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100% { background-color: #fff; }
+}
+
+/* Estilos do contador */
+.contador {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Transição da barra de navegação */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar.rolado {
+  background-color: rgba(230, 126, 34, 1);
+}
+
+/* Seção Início */
+#inicio {
+  background-image: url('img/daniel.jpeg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Certifique-se de que a altura da seção seja 100% da altura da viewport */
+  display: flex;
+  align-items: center;
+  color: #fff; /* Ajuste a cor do texto se necessário */
+  text-align: center;
+}
